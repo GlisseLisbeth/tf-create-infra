@@ -8,23 +8,12 @@ Para instalar Terraform en tu sistema, sigue estos pasos generales. Ten en cuent
 
 - Visita la página de descargas de Terraform en el sitio web oficial: https://www.terraform.io/downloads.html
 
-- Descarga la versión de Terraform que corresponda a tu sistema operativo. Por ejemplo, para Linux, puedes ejecutar el siguiente comando en la terminal:
+- Ejecutar los siguientes comandos en la terminal:
 
     ```sh
-    wget https://releases.hashicorp.com/terraform/<VERSION>/terraform_<VERSION>_linux_amd64.zip
-    ```
-
-- Asegúrate de reemplazar <VERSION> con la versión de Terraform que deseas instalar, que puedes encontrar en el sitio web.
-
-- Descomprime el archivo descargado utilizando el comando unzip. Por ejemplo:
-
-    ```sh
-    unzip terraform_<VERSION>_linux_amd64.zip
-    ```
-- Mueve el ejecutable de Terraform a un directorio incluido en tu variable de entorno PATH para que puedas ejecutarlo desde cualquier ubicación. Puedes usar el siguiente comando para hacerlo:
-
-    ```sh
-    sudo mv terraform /usr/local/bin/
+    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update && sudo apt install terraform
     ```
 - Verifica que Terraform se haya instalado correctamente ejecutando:
 
