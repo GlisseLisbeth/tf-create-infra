@@ -56,5 +56,3 @@ Para instalar la AWS Command Line Interface (CLI), puedes seguir estos pasos gen
     ```sh
     aws --version
     ```
-
-Después de instalar AWS CLI, deberás configurar las credenciales de AWS para que puedas autenticarte y utilizar los servicios de AWS. Puedes configurar las credenciales utilizando el comando aws configure, que te solicitará tu clave de acceso y clave secreta de AWS, así como la región predeterminada y el formato de salida. Asegúrate de configurar adecuadamente tus credenciales antes de comenzar a utilizar AWS CLI.
